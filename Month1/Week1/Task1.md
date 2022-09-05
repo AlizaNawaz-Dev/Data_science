@@ -2,7 +2,14 @@
 ### Data Science:
 In simple words converting big amount of raw data into **valuable information** for decision-making or strategic planning is data science.  
 By using these insight we can **predict or analyze** something that can happen in future.  
-This data can be related to people, machines, healthcare and about anything happening all around the world.  
+This data can be related to people, machines, healthcare and about anything happening all around the world. 
+### Life Cycle:  
+1- Problem Identification  
+2- Data Analysis  
+3- Modelling  
+4- Visualization   
+5- Communicate Results
+
 ### Example:  
 #### E-commerce: 
 - As , data science has influenced the data science industry.    
