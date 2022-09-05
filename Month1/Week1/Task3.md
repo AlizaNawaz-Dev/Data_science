@@ -1,6 +1,6 @@
 # Combinatorics  
 Counting the number of ways to put things together into various combinations.  
-It includes the enumeration or counting of objects having certain properties. 
+It includes the ***enumeration or counting*** of objects having certain properties.   
 To search for a suitable combinatorial construct that does fit the data.
 ### Use in Data Science  
 - Graph Theory:Study of objects and connections between them.
