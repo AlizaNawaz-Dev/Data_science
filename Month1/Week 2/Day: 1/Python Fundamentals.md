@@ -5,6 +5,7 @@
 ``` python
 Age=input("Enter Your Age")
 print(Age)
+
 Age=int(input())                      
 print(Age+3)      
 ```
@@ -30,6 +31,7 @@ print(name.replace("i","ee"))            #output:Aleeza Nawaz
 varaiblename.upper()
 ``` python
 name="Aliza Nawaz"
+
 print(name.upper())                     #output:ALIZA NAWAZ
  
 ```
@@ -38,6 +40,7 @@ print(name.upper())                     #output:ALIZA NAWAZ
 varaiblename.lower()
 ``` python
 name="ALIZA Nawaz"
+
 print(name.lower())                     #output:aliza nawaz
  
 ```
@@ -46,6 +49,7 @@ print(name.lower())                     #output:aliza nawaz
 varaiblename.find('value')
 ``` python
 name="aliza nawaz"
+
 print(name.find('i'))                   #output:2
  
 ```
@@ -54,6 +58,7 @@ print(name.find('i'))                   #output:2
 **Example:**    
 ``` python
 name="Aliza Nawaz"
+
 print(name.upper())           #output:ALIZA NAWAZ
 print(name)                   #output:Aliza Nawaz
 ```
