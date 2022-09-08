@@ -18,8 +18,10 @@ print("I Love Choclates")
 Marks_1= 70
 Marks_2= 80
 Marks_3= 60
+
 Obtained= Marks_1+Marks_2+Marks_3
 print(Obtained)                   #output:210
+
 Percentage=Obtained/300*100
 print(Percentage)                 #output:70.0
 ```
@@ -34,6 +36,7 @@ print(Percentage)                 #output:70.0
 Marks = 70        
 Percentage = 12.3 
 Percentage = float(12.3)          # This will print 12 after typecasting
+
 print(percentage)
 ```  
 
@@ -52,6 +55,7 @@ print(Information)
 ``` python   
 First_Name = "Aliza"
 Last_Name = "Nawaz"
+
 Name=First_Name+" " +Last_Name
 print(Name)                       #output:Aliza Nawaz
 ```
@@ -76,6 +80,7 @@ print(Choclates)                            #output:['Kit-Kat', 'Bounty', 'Dairy
 ``` python 
 Choclates=["Kit-Kat","Bounty","Dairy-Milk"]
 Information = [150,450,40,Choclates]
+
 print(Information)                         #output:[150, 450, 40, ['Kit-Kat', 'Bounty', 'Dairy-Milk']]
 ```
 
