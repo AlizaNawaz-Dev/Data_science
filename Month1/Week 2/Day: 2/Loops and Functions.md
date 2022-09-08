@@ -14,6 +14,7 @@ Initializer
 ### Example:To print square n lines, one corresponding to each.  
 ```python
 n=int(input())
+
 for i in range(n) :
     if n<20:
         print(i*i)
@@ -34,8 +35,10 @@ for i in range(n) :
 def is_leap(year):               #Header of function
     if year % 400 == 0:         
         return True
+        
     if year % 100 == 0:         #Functionality
         return False
+        
     if year % 4 == 0:
         return True
     return False
