@@ -10,7 +10,7 @@ OOP is based on object and classes.
 - It consists of **State + behavior**.  
 - Attributes in python are represented by variables.  
 - **State <--> Attributes** (In python state information is contained in attributes).  
-- **Behavior <--> Method ** (Behaviors information in method/function).  
+- **Behavior <--> Method** (Behaviors information in method/function).  
 - Object is Concrete representaion of class.  
 ## type():  
 - By using type(class_name) function we can find class of any object.  
@@ -28,7 +28,7 @@ class Choclate:
   pass
 C1 = choclate()
 ```
-- As above defined class is not performing any functionality so we can create methods.  
+- As above defined class is not performing any functionality so we can create methods to perform any action.
 - Methods in class are same as regular python function having one exception.  
 - Every method will have **self** as it's first argument in method definition.  
 ### Syntax:  
@@ -75,4 +75,37 @@ print(C2.category)                                          #       MILKY
 
 ```
 
-- Rather then using variables we can also use different data structures.
+- Rather then using variables we can also use different data structures.  
+### lists:
+- ***Syntax***
+Choclates=[Choclates(pass arguments),
+          Choclates(pass arguments)]  
+``` python
+Choclates=[Choclates("Dairy-Milk", "Dark"),
+           Choclate ("Dairy-Milk", "Dark")]
+```
+***Static Method***:
+- Not attached to any individual object.  
+- Invoked on class itself.  
+- They dont have parameters in function definition.  
+- They are invoked usig class name.  
+- classname.method()  
+```python
+class Choclates:
+  def Info():
+    print("Choclate Class")
+Choclates.Info()                                          #output:Choclate Class
+```
+- There are also three principles in oop
+### Encapsulation:
+def
+```python
+```
+### Inheritance:
+def
+```python
+```
+### Polymorphism:
+def
+```python
+```
