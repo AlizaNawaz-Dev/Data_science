@@ -1,14 +1,19 @@
 # Object-Oriented-Programing(OOP):  
-Based on concept of objects that can contain data.  
+Based on concept of objects that can contain **data**.  
 OOP is based on object and classes.  
 ## Class:
-- It's a blueprint for objects.   
+- It's a **blueprint** for objects.   
 - Outlines possible states and behaviors.  
 - Class is an abstract template of what object can contain.  
 ## Object:
 - We use class to create an object.  
 - It consists of **State + behavior**.  
-- Attributes in python are represented by variables.  
+- ### State:     
+- Properties of an object. ( size, colour, model) .    
+- ### Behavior:  
+- The tasks that an object performs(person can walk,speak,cook)  .  
+
+- Attributes in python are represented by **variables**.  
 - **State <--> Attributes** (In python state information is contained in attributes).  
 - **Behavior <--> Method** (Behaviors information in method/function).  
 - Object is Concrete representaion of class.  
@@ -35,7 +40,7 @@ C1 = choclate()
 **def** name(**self**, param1) **:**  
 (indented)statments  
 Create object:   
-Obj=name**()**  
+Obj=name **()**  
 Call class method through this obj  
 Obj.name("aliza")   value is passed.  
 - self is not needed in method call.  
@@ -98,14 +103,72 @@ Choclates.Info()                                          #output:Choclate Class
 ```
 - There are also three principles in oop
 ### Encapsulation:
-def
+- Wrapping up of data under a single unit.  
+- It is a protective shield that prevents the data from being accessed by the code outside.  
+- Prevent the accidental modification of data.  
+- ***Private variables*** are used to prevent modification.In python we can private variables using '_'(underscore).   
 ```python
+class Choclate:
+    def __init__(self):
+        self._name = "Kit-Kat"                                            # Protected member
+
+class Candy(Choclate):
+    def __init__(self):
+        Choclate.__init__(self)                                          # Calling constructor of Base class
+        print("member of base class: ",self._name)
+
+        self._name = "Galaxy"                                             # Modify the protected variable
+        print("modified protected member outside class: ",self._name)
+
+obj1 = Candy()
+obj2 = Choclate()
+
+print("protected member of obj1: ", obj1._name)                          # Calling protected member
+print("protected member of obj2: ", obj2._name)
 ```
 ### Inheritance:
-def
+- When a class derives from another class.  
+- Child class can access all information of parent class including methods attributes.  
+- provides the reusability of a code.(we dont have to rewrite code over and over having same functionality).  
+- In python we can inherit class like this.  
+- ***Class DerivedClass(BaseClass):***  
 ```python
+class Choclate:
+     def __init__(self, name,category):
+        self.name = name
+        self.category=category
+
+    def update_category(self, new_category):
+        print("Updated category Is:")
+        self.category = new_category
+        
+class Candy(Choclate):
+    def __init__(self, name):
+        self.name = name
+        
+Obj1= Candy("Kit-kat",)
+Obj1.update_category("Dark")              #Accessing method of parent class
+print(Obj1.category)                      #output:Updated category Is:
+                                                  Dark
 ```
 ### Polymorphism:
-def
+- Methods in the child class that have the same name as the methods in the parent class.  
 ```python
+class Choclate:
+    def info(self):
+        print("This is Choclate class method!!")
+
+    def Category(self,category):
+        self.category=category
+
+class Candy(Choclate):
+    def info(self):
+        print("This is Candy class method!!")
+
+obj1=Choclate()
+obj2=Candy()
+obj1.info()                               #output:This is Choclate class method!!
+obj2.info()                               #output:This is Candy class method!!
+
+
 ```
