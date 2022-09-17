@@ -1,4 +1,18 @@
 # Rock ,Paper and Scissor
+##  1- Random Module:
+- Returns a random number between the **given range**.  
+- Creates pseudo-random numbers(these are not truly random).  
+
+   - **random.randint() :** method is used to generate random integers between the given range.  
+   
+##  2- Lower():
+-  Built-in Python method  used for string handling.  
+-  It takes no arguments.  
+-  From the given string **lower()** converts each uppercase character to lowercase.  
+  
+#### in:
+- To check if a value is present in given Datastructure.  
+-  To iterate through a sequence in a for loop.  
 ``` python
 import random
 
