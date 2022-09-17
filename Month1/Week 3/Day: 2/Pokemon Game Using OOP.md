@@ -14,9 +14,9 @@ class Pokemon:
         game_map = {"water": 0, "fire": 1, "grass": 2}
         # Win-lose matrix
         rps_table = [
-            [-1, 1, 0],  # water
-            [0, -1, 1],  # fire
-            [1, 0, -1]   # grass
+            [-1, 1, 0],  
+            [0, -1, 1],  
+            [1, 0, -1]   
         ]
         result = rps_table[game_map[type1]][game_map[type2]]
         return result_map[result]
