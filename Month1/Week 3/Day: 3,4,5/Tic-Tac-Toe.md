@@ -36,7 +36,7 @@ def handle_turn(player):
     while not valid:
 
         while position not in ["1", "2", "3", "4", "5", "6", "7", "8", "9"]:
-            position = input("Choose a position from 1-9: ")
+            position = input("Choose Valid Position again Please:(")
 
         position = int(position) - 1
 
@@ -46,17 +46,17 @@ def handle_turn(player):
         else:
             print("you cant go there. GO AGAIN")
     board[position] = player
-    display_board()
+    Display_board()
 
 
 def check_if_game_over():
-    check_for_winer()
+    check_for_winner()
     check_if_tie()
 
 
 def check_for_winner():
     global Winner
-    
+
     row_winner = check_rows()
     column_winner = check_columns()
     diagonal_winner = check_diagonals()
@@ -76,7 +76,7 @@ def check_for_winner():
 
 def check_rows():
     global Game_Still_Going
-    
+
     row_1 = board[0] == board[1] == board[2] != "-"
     row_2 = board[3] == board[4] == board[5] != "-"
     row_3 = board[6] == board[7] == board[8] != "-"
@@ -94,7 +94,7 @@ def check_rows():
 
 def check_columns():
     global Game_Still_Going
-    
+
     column_1 = board[0] == board[3] == board[6] != "-"
     column_2 = board[1] == board[4] == board[7] != "-"
     column_3 = board[2] == board[5] == board[8] != "-"
@@ -111,17 +111,16 @@ def check_columns():
 
 
 def check_diagonals():
-
     global Game_Still_Going
     diagonals_1 = board[0] == board[4] == board[8] != "-"
     diagonals_2 = board[6] == board[4] == board[2] != "-"
 
     if diagonals_1 or diagonals_2:
         Game_Still_Going = False
-        
+
     if diagonals_1:
         return board[0]
-        
+
     elif diagonals_2:
         return board[6]
     return
@@ -129,7 +128,7 @@ def check_diagonals():
 
 def check_if_tie():
     global Game_Still_Going
-    
+
     if "-" not in board:
         Game_Still_Going = False
     return
@@ -137,10 +136,10 @@ def check_if_tie():
 
 def flip_player():
     global Current_player
-    
+
     if Current_player == 'X':
         Current_player = 'O'
-        
+
     elif Current_player == 'O':
         Current_player = 'X'
     return
