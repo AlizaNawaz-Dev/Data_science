@@ -25,7 +25,9 @@ venv\Scripts\activate
 ```
 
 ###  css selectors:
-      - extract():
+- Tell the browser which HTML elements should be selected. 
+
+- Enables to target particular HTML elements(type ,class and ids).  
       
 
 ## Scraping Title of website(Using scrapy):
@@ -46,6 +48,7 @@ pip install os-scrapy
 2- cd project_name (to get into project's sub directory)
 ``` python
 scrapy startproject scraping_title
+
 cd scraping_title
 ```
 ### Creating Spider:
@@ -58,9 +61,127 @@ Now our spider file has been created inside spider folder named **amazon_spider*
 ### Scraping Title:
 In amazon_spider file.  
    - Inside **start_urls** list paste link of url you want to scrape
-   - start_urls = ['https://www.amazon.com/s?k=chocolates&crid=2RRM21AZHD1PP&sprefix=chocolates%2Caps%2C296&ref=nb_sb_noss_1']
+   - start_urls = ['https://quotes.toscrape.com/']
    - Extract the required information using css selectors inside parse method.  
    
+``` python 
+import scrapy
+
+class AmazonSpider(scrapy.Spider):
+
+    name= "Choclates"
+    
+    start_urls=["https://quotes.toscrape.com/"]
+
+    def parse(self,response):
+    
+	title=response.css("title::text").extract()
+```
+### Running scrapy crawler:
+In terminal: inside sub-directory(cd project_name)   
+**scrapy crawl spider_name**
+``` python
+scrapy crawl quotes
+```
+day3:
+**scraping multiple titles, authors and quotes.**
+``` pyhton
+import scrapy
+
+class QuoteSpider(scrapy.Spider):
+
+    name= "Quote"
+    start_urls=["https://quotes.toscrape.com/"]
+
+    def parse(self,response):
+
+        all_div_quotes=response.css("div.quote")
+        
+        for quotes in all_div_quotes:
+
+            title= quotes.css("span.text::text").extract()
+            author= quotes.css(".author::text").extract()
+            tags= quotes.css(".tag::text").extract()
+
+            yield {"Title" : title,
+                   "Author": author,
+                   "Tags"  : tags
+                   }
+ ```
+
+### Creating Items/Containers:  
+Inside items.py file  
+
+name = scrapy.Field()  (where name is container for info scraped inside name)  
+``` python
+import scrapy
 
 
+class QuoteItem(scrapy.Item):
+
+     title = scrapy.Field()
+     author = scrapy.Field()
+     tags= scrapy.Field()
+```
+Using these containers inside our spider file.  
+1- import this item file in spider file.
+   - from ..items import QuoteItem      (Quoteitem is class containing items)  
+
+2- Inside parse method create instance of imported class.  
+   - items(objectname)=AmazonItem()(class)  
+
+3- We have to store scraped data in individual containers.  
+   - items["name"]=name
+``` python
+import scrapy
+
+from ..items import QuoteItem
+
+class QuoteSpider(scrapy.Spider):
+
+    name= "Quote"
+    start_urls=["https://quotes.toscrape.com/"]
+
+    def parse(self,response):
+
+        items=QuoteItem()
+
+        all_div_quotes=response.css("div.quote")
+        for quotes in all_div_quotes:
+
+            title= quotes.css("span.text::text").extract()
+            author= quotes.css(".author::text").extract()
+            tags= quotes.css(".tag::text").extract()
+            
+            items["title"] = title
+            items["author"] =author
+            items["tags"] = tags
+            
+            yield items
+  ```
+# Storing scraped Data:
+- Now for storing scraped data in xml,csv and json file format.   
+
+- We can give different extensions to file as required(.json,.xml,.csv).  
+
+- scrapy crawl spider_name -o file_name.csv
+``` python
+scrapy crawl Quote -o items.csv        # for Stoing data in csv file format.
+
+scrapy crawl Quote -o items.xml        # for Stoing data in xml file format.
+
+scrapy crawl Quote -o items.json        # for Stoing data in json file format.
+```
+
+# Pipelines:
+- 
+Activate pipelines:
+uncommment code given below(already given inside settings.py(comes with scrapy package) file)
+``` python
+ITEM_PIPELINES = {
+   'quote.pipelines.QuotePipeline': 300,
+}
+```
+
+# Basics of sqlite3:
 
