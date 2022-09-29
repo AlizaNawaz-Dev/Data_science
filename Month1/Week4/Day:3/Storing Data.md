@@ -1,6 +1,6 @@
 # Data Storage:
 **scraping multiple titles, authors and quotes.**
-``` pyhton
+``` python
 import scrapy
 
 class QuoteSpider(scrapy.Spider):
@@ -22,7 +22,7 @@ class QuoteSpider(scrapy.Spider):
                    "Author": author,
                    "Tags"  : tags
                    }
- ```
+```
 
 ### Creating Items/Containers:  
 Inside items.py file  
@@ -99,4 +99,9 @@ ITEM_PIPELINES = {
 ```
 
 # Basics of sqlite3:
+Following steps need to be followed for data storage in sqlite3.
+1- import sqlite3  
+2- Create connection to the database.  
+    - conn=sqlite3.connect("my_db.db")     
+    - **my_db.db** is name of database (if file doesn't exsist then it will be created using .db extension) 
 
