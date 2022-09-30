@@ -99,9 +99,16 @@ ITEM_PIPELINES = {
 ```
 
 # Basics of sqlite3:
-Following steps need to be followed for data storage in sqlite3.
+Following steps need to be followed for data storage in sqlite3.  
 1- import sqlite3  
-2- Create connection to the database.  
-    - conn=sqlite3.connect("my_db.db")     
-    - **my_db.db** is name of database (if file doesn't exsist then it will be created using .db extension) 
 
+2- Create connection to the database.    
+       •  conn=sqlite3.connect("my_db.db")       
+       •  **my_db.db** is name of database (if file doesn't exsist then it will be created using .db extension)  
+       
+3- After creation of database for creating table and inserting values we have to write query.   
+#### Table Creation:  
+       •  curr.execute(""" **create** ***table*** table_name( col_name type,col_name type)""")   
+#### Insertion:  
+       •  curr.execute("""**insert into** table_name values("KIT-KAT","234","4-5"))"""   
+       
