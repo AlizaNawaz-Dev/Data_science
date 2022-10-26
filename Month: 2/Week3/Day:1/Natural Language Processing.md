@@ -14,7 +14,11 @@
 
    ○ Mapping the given input in natural language into useful representation.  
    
-## Challenges while NLU(understading):  
+### 2- Natural Language Generator (NLG):  
+
+   ○ Producing meaningful phrases and sentences in the form of natural language.  
+   
+## Challenges in NLU(understading):  
 **1- Lexical ambiguty**
 
 •During NLU phase input speech is divided into multiple tokens(parts) and it is difficult or impossible to understand it without some additional information.  
@@ -31,12 +35,10 @@
 
 • where the context of a phrase gives  multiple interpretations(when the statement is not specific).  
    
-### 2- Natural Language Generator (NLG):  
 
-   ○ Producing meaningful phrases and sentences in the form of natural language.  
 
 ### Applications:
-• Speeech recognition  
+• Speeech Recognition  
 • Google Assitant  
 • Sentimental Analysis  
 • Machine Translation Industry  
