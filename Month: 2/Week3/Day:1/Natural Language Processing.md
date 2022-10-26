@@ -6,6 +6,8 @@
 
 ## ◎ Cycle:
 
+![NLP](https://user-images.githubusercontent.com/108535783/198045962-6f82cd59-b167-4049-a470-c91993ce6eab.PNG)
+
 - There are two main components of NLP  
 
 ### 1- Natural Language Understading (NLU):  
