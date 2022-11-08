@@ -1,6 +1,6 @@
 # What is a Database?
 - **Organized** collection of related information.  
-- Set up for easy access, management and updating of Data.  
+- Set up for easy access, management and updation of Data.  
 
 ## Database Mangment System(DBMS):
 - DBMS is **not actual database** it's a software program that help users to create and maintain databases.  
@@ -29,4 +29,5 @@
      - mySQL, Oracle, mariaDB   
  - RDBMS uses Structured Query Language(sql) to interact with database.  
  
- 
+ ## Query:
+ - A  request made to DBMS for a specific peice of information.  
