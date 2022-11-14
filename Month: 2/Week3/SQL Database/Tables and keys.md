@@ -17,9 +17,8 @@
  •  Any column containing **unique attributes** can be assigned as primary key.  
  
  • **For Example:**   
-               ∙ In DB of citizen's **CNIC of every person is unique** so we can identify each citizen uniquely using their cnic.   
-               
-               ∙ There's a possibility of having multiple citizens of same name so here primary key come in action and identify each person as seperate entity based on CNIC. 
+        ∙ In DB of citizen's **CNIC of every person is unique** so we can identify each citizen uniquely using their cnic.   
+        ∙ There's a possibility of having multiple citizens of same name so here primary key come in action and identify each person as seperate entity based on CNIC. 
                
 ⇒ **Foreign key:**  
 
@@ -35,9 +34,21 @@
 
 • If a single column can't identify any row uniquely, a **combination of over one column** can uniquely identify any record.   
 
+# Bsics of Structured Query Language(SQL):  
 
+- A Language used to interact with Relational DB Managment system(RDBMS).    
 
+- SQL tells the RDBMS to perform differenet operations like  CRUD , Backups , Maintainance and secutity e-t-c.   
 
+- It's a hybrid language combination of four languages.  
+
+◾ Data Query Language(DQL).   
+◾ Data Definition Language(DDL).  
+◾ Data Control Language(DCL).  
+◾ Data Manuplation Language(DML).  
+
+- We can write query(Instruction in SQL) that direct RDBMS to retrieve specific peice of information we want from tons of complex DB schema.  
+  
 
 
 
