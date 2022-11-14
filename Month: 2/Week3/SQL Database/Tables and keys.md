@@ -17,7 +17,30 @@
  •  Any column containing **unique attributes** can be assigned as primary key.  
  
  • **For Example:**   
-               ∙ In DB of citizen's CNIC of every person is unique so we can identify each citizen uniquely using their cnic.   
-               ∙ There's a possibility of having multiple citizens of same name so here primary key come in action and identify each person as seperate entity.    
+               ∙ In DB of citizen's **CNIC of every person is unique** so we can identify each citizen uniquely using their cnic.   
+               
+               ∙ There's a possibility of having multiple citizens of same name so here primary key come in action and identify each person as seperate entity based on CNIC. 
+               
+⇒ **Foreign key:**  
+
+• Provides a **link** between data in two tables.  
+
+• It's basically a column or a set of columns in a table whose **values correspond to the values of the primary key** in another table.   
+
+• In simple words foreign key is primary key of another table.  
+
+⇒ **Composite key:** 
+
+• A primary key having **two or more attributes**.   
+
+• If a single column can't identify any row uniquely, a **combination of over one column** can uniquely identify any record.   
+
+
+
+
+
+
+
+
                          
   
