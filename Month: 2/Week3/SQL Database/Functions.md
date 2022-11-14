@@ -35,6 +35,22 @@ SELECT student_name FROM student
                     ORDER BY gpa;
 ```
 
+🔘 **UNION:** 
+- To combine the result-set of two or more SELECT statements. 
+- Same number of columns should be selected from both tabels.  
+- DataType should be same.  
+```SQL
+SELECT student_id FROM student
+UNION 
+SELECT feeChallan_No FROM finance;
+```
+🔘 **AS:** 
+- We can change current column name with new name by using AS keyword.  
+``` SQL
+SELECT student_names AS name 
+                     FROM student;
+```
+
 # WILDCARDS:
 -  Search for a specified pattern in a column.
 -  Wildcard characters are used with the LIKE operator.  
