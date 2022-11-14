@@ -58,11 +58,20 @@ student_major VARCHAR  (20) DEFAULT 'UnDecided';
 ⊛ **AUTO_INCREMENT:** Allows a unique number to be generated automatically when a new record is inserted into a table.  
 
 
-# Deleting Data:
-
-# Updating Data:
+## Updating Data:
 - Query to update a major name based on a condition keyword **WHERE** is used to **impose condition **in query.  
 ``` SQL
-UPDATE student SET major= 'BIO'
-               WHERE major='BIOLOGY'
+UPDATE student SET student_major= 'BIO'
+               WHERE student_major='BIOLOGY';
+```
+- We can also modify multiple columns based on multiple conditions in single query.  
+``` SQL
+UPDATE student SET student_major='Bio_Chemistry'
+               WHERE student_major="BIO" OR student_major="Chemistry";
+```
+
+## Deleting Data:
+``` SQL
+DELETE  FROM student
+               WHERE student_major='BIOLOGY';
 ```
