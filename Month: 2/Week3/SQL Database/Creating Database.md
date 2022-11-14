@@ -8,6 +8,7 @@ CREATE TABLE student (
                     student_name VARCHAR (20), 
                     student_major VARCHAR  (20) 
                     )
+DESCRIBE student;
 ```
 
 ### Deleting Table:
@@ -25,3 +26,14 @@ ALTER TABLE student ADD gpa DECIMAL(4,6);
 ``` SQL 
 ALTER TABLE student DROP column gpa;
 ```
+
+# Inserting Data:
+- Inserting student's information into table **student**.    
+``` SQL
+INSERT INTO student VALUES(1 , 'Ali', 'CS');
+```
+- In order to check whether information is **inserted successfully or not** we can use this query.  
+``` SQL 
+SELECT * FROM student;
+```
+-The above query will show all information stored in table **student**.  
