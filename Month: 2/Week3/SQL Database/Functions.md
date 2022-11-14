@@ -18,6 +18,19 @@ SELECT SUM(marks) FROM student;
 ```
 🔘 **GROUP BY**: Groups rows that have the same values,often used with aggregate functions(SUM,COUNT,AVG).   
 ```SQL
-SELECT COUNT(gpa), gpa FROM student
-                  GROUP BY gpa;
+SELECT COUNT(gpa), student_name FROM student
+                       GROUP BY student_name;
+```
+
+🔘 **LIMIT:** Select a limited number of records.  
+```SQL
+SELECT student_name FROM student
+                    LIMIT 5;
+```
+- Above query will give first five names of students.  
+
+🔘 **ORDER BY:** Sorts the records according to given column. (by default in ascending order ).   
+``` SQL
+SELECT student_name FROM student
+                    ORDER BY gpa;
 ```
