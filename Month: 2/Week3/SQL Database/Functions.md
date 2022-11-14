@@ -34,3 +34,19 @@ SELECT student_name FROM student
 SELECT student_name FROM student
                     ORDER BY gpa;
 ```
+
+# WILDCARDS:
+-  Search for a specified pattern in a column.
+-  Wildcard characters are used with the LIKE operator.  
+-  The LIKE operator is used for search.  
+-  Now this pattern can be found by using two special operators.  
+
+◼ **_**  Represents a **single** character.  
+
+◼ **%**  Represents **zero or more**characters. 
+
+```SQL
+SELECT * FROM student
+         WHERE student_major LIKE '%science%';
+```
+- This query will give all information about student having science in their major.  
