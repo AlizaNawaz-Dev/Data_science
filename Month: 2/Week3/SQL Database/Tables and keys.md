@@ -4,3 +4,20 @@
 - Each row represents a **group of related data values**(all present information of a single entity).  
 
 - A column describes a **field of information** all entities possess(Single peice of information about one entity).  
+
+# Keys:
+- Used to **establish and identify** relationships between tables and within a table.
+
+- There are multiple keys in relational DB having different roles.  
+
+ ⇒ **Primary key:**
+ 
+ •  It's a **unique** identifier.
+ 
+ •  Any column containing **unique attributes** can be assigned as primary key.  
+ 
+ • **For Example:**   
+               ∙ In DB of citizen's CNIC of every person is unique so we can identify each citizen uniquely using their cnic.   
+               ∙ There's a possibility of having multiple citizens of same name so here primary key come in action and identify each person as seperate entity.    
+                         
+  
