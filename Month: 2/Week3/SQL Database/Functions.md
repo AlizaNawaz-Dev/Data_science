@@ -66,3 +66,16 @@ SELECT * FROM student
          WHERE student_major LIKE '%science%';
 ```
 - This query will give all information about student having science in their major.  
+
+
+## Joins:
+- When we need informtion fom more then one table **joins** are pretty useful.  
+- Join is used to combine two or more tabels **based on related columns**(they have columns in common).  
+- **ON** keyword is used to specify those common columns.  
+- While selecting columns we are also prefixing table name with column name because in this case select statment is used on coulmns from multiple tabels.
+``` SQL
+SELECT student.student_id,student.student_major,finance.feeChallan_No
+FROM student
+JOIN finance
+ON student.student_id = finance.id;
+```
