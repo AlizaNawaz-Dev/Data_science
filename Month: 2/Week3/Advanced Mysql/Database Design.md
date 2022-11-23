@@ -54,3 +54,23 @@
  - A relation that is in First and Second Normal Form.  
  - Every non-primary attribute(column) should be dependent on it's primary key.  
  
+
+## MyISAM :
+
+- Is MySQL **storage engine** where storage engines are database management system components used to **manipulate data** from in database.  
+- Designed for **speed.**  
+- No **roll-back** mechanisam during updation of records.  
+- Ideal for tables that are used for **SELECT** statments.  
+
+## Archive Datbase:
+
+- Is a **storage engine** for the MySQL.   
+- Stores large amount of data **without indexing**.  
+- Support **INSERT** and **SELECT** command.  
+- Ideal for archiving data that will not change once when created.  
+
+## InnoDB:
+
+- General purpose storage engine that **balances high reliability** and high performance.  
+- Supports foreign keys,rollbacks and crash recovery capabilities.   
+- Ideal for tabels where **integrity** is important.  
