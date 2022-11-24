@@ -34,7 +34,7 @@ CREATE VIEW new_Info;           # new_Info is view name
 DROP VIEW new_Info;
 ```
 
-## IMPORT/EXPORT :
+## IMPORT/EXPORT Data:
 
 ➝ **Export data to out file:**
 - Now rather then showing data on the screen we can also store it in different file formats (CSV,textfile,spreadsheet adn sql) in our system.   
@@ -59,7 +59,7 @@ FIELDS ENCLOSED BY '"' TERMINATED BY ',' ESCAPED BY '\\'
 LINES TERMINATED BY'\r\n';
 ```
 
-## Crearing table from exsisting table:
+## Creating table from exsisting table:
 
 - Let's say we want to create a new table that contains some related important information of original table.   
 ```SQL
@@ -96,3 +96,4 @@ WHERE student_id= @oldstudent_id;
 
 COMMIT;
 ```
+
