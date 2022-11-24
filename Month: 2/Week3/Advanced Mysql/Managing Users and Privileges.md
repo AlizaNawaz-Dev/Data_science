@@ -67,3 +67,10 @@ SHOW VARIABLES WHERE Variable_Name LIKE '%dir';
 **
 - Only copies data that has been **changed** or created since the **previous backup**.  
 - Database can be **accessed** during backup.  
+
+➮ **Truncate:**
+- Removes the complete data without removing its structure.  
+```SQL
+TRUNCATE TABLE my_students.student;
+```
+
