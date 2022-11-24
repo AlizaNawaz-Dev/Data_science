@@ -73,4 +73,20 @@ SHOW VARIABLES WHERE Variable_Name LIKE '%dir';
 ```SQL
 TRUNCATE TABLE my_students.student;
 ```
+## Performance issues:
+
+- Insufficient hardware resources.  
+- Large number of connections.   
+- Poor database design or incorrectly configured MySQL settings.  
+## Server Monitoring: 
+
+➮ Server Status:
+- View infromation about server and hardware and also server directories.  
+
+➮ Client Connections:
+- View currently connected users and kill connections and queries.  
+
+➮ Status and System Variables:
+- View status and system variables.  
+
 
