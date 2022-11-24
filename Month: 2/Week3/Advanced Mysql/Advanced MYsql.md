@@ -72,4 +72,27 @@ FROM student
 WHERE major='CS';                     
 ```
 
-- If we want to update a record that present in multuplr
+- If we want to update a record that present in multuple tabels.  
+- We create session variables using @ sybmol to do this task.   
+```SQL
+SET @oldstudent_id := 021;
+SET @newstudent_id := 120;
+```
+### Transaction:
+
+- In order to make sure that all related tabels are updated we can use transaction.  
+- Transaction begins with a specific task and ends when all the tasks in the group successfully completed.  
+- If any of the tasks fail, the transaction fails.  
+- The COMMIT command saves all the transactions to the database
+``` SQL
+START TRANSACTION;
+UPDATE students
+SET student_id= @newstudent_id
+WHERE student_id= @oldstudent_id;
+
+UPDATE finance
+SET student_id= @newstudent_id
+WHERE student_id= @oldstudent_id;
+
+COMMIT;
+```
