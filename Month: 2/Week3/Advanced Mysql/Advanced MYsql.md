@@ -7,13 +7,13 @@
 -  Let's say to convert salary to **two decimal digit** we can provide value (like 2) and number will be **limited** to two after point.  
 ```SQL
 
-   FORMAT(salary,2)                    # 10987.32
+FORMAT(salary,2);                    # 10987.32
 ```
 ➠ **CONCAT():**
 
 - Adds two or more strings together.  
 ``` SQL
-   CONCAT('$',FORMAT(salary,2))        # $10987.32
+CONCAT('$',FORMAT(salary,2));       # $10987.32
 ```
 
 - When we perform aggregate functions or any sort of calculation on database tabels they only **exsist in system's memory**.  
@@ -22,6 +22,26 @@
 
 ### Alternative to Above:
 
-- When we create a table and insert calculated information into table this is only for **viewing** means we are unable to modify/update or perform further operations.  - That table will be **static** new changes made in database tabels won't effect this static table.
+- When we create a table and insert calculated information into table this is only for **viewing** means we are unable to modify/update or perform further operations.  
+- That table will be **static** new changes made in database tabels won't effect this static table.
 - So alternatively we can use **VIEW** it will be same as table but will also be updated when related information will change.   
+- To create view:
+``` SQL
+CREATE VIEW new_Info           # new_Info is view name 
+```
+- We can drop/delete view in same way as we do for tabels.  
+```SQL
+DROP VIEW new_Info
+```
+
+## IMPORT/EXPORT :
+
+- Now rather then showing data on the screen we can also store it in different file formats (CSV,textfile,spreadsheet adn sql) in our system.   
+- To create csv file of data present in table:
+``` SQL
+SELECT * 
+FROM students
+INTO OUTFILE 'c:\\data\\students.csv'            # 'c:\data\students.csv' is path where we want our data to be stored.
+```
+- Reason behind using \\ is that  \ is **delimiter**(boundary) in mysql so we use two instead of one.  
 - 
