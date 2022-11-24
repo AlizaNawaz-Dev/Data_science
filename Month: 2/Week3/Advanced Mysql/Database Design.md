@@ -74,3 +74,4 @@
 - General purpose storage engine that **balances high reliability** and high performance.  
 - Supports foreign keys,rollbacks and crash recovery capabilities.   
 - Ideal for tabels where **integrity** is important.  
+
