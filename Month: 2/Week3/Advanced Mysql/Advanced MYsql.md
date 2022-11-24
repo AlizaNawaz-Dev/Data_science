@@ -27,21 +27,49 @@ CONCAT('$',FORMAT(salary,2));       # $10987.32
 - So alternatively we can use **VIEW** it will be same as table but will also be updated when related information will change.   
 - To create view:
 ``` SQL
-CREATE VIEW new_Info           # new_Info is view name 
+CREATE VIEW new_Info;           # new_Info is view name 
 ```
 - We can drop/delete view in same way as we do for tabels.  
 ```SQL
-DROP VIEW new_Info
+DROP VIEW new_Info;
 ```
 
 ## IMPORT/EXPORT :
 
+➝ **Export data to out file:**
 - Now rather then showing data on the screen we can also store it in different file formats (CSV,textfile,spreadsheet adn sql) in our system.   
 - To create csv file of data present in table:
 ``` SQL
 SELECT * 
 FROM students
 INTO OUTFILE 'c:\\data\\students.csv'            # 'c:\data\students.csv' is path where we want our data to be stored.
+FIELDS ENCLOSED BY '"' TERMINATED BY ',' ESCAPED BY '\\'
+LINES TERMINATED BY'\r\n';
 ```
 - Reason behind using \\ is that  \ is **delimiter**(boundary) in mysql so we use two instead of one.  
-- 
+
+
+➝ **Import data from out file:**
+- As we have our data stored in csv file we can load it back in our database.  
+``` SQL
+LOAD DATA
+INFILE 'c:\\data\\students.csv'
+INTO TABLE my_students.students
+FIELDS ENCLOSED BY '"' TERMINATED BY ',' ESCAPED BY '\\'
+LINES TERMINATED BY'\r\n';
+```
+
+## Crearing table from exsisting table:
+
+- Let's say we want to create a new table that contains some related important information of original table.   
+```SQL
+CREATE TABLE cs_Students 
+LIKE my_students.student;                 # This query will create a structure of table like student table without any data in it.
+
+INSERT cs_Students 
+SELECT * students_name,student_id
+FROM student
+WHERE major='CS';                     
+```
+
+- If we want to update a record that present in multuplr
