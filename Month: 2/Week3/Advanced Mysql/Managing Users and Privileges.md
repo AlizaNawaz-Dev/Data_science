@@ -48,3 +48,22 @@ SET password for my_user = password('myNewPassword');
 ```SQL
 DROP user my_user;
 ```
+
+# Backingup and Restoring Database:
+
+⦿ Locating Daatabase files.  
+```SQL
+SHOW VARIABLES WHERE Variable_Name LIKE '%dir';
+```
+- Above query will show us all the paths having dir so we can browse those paths and can locate our DB.  
+
+### Backup Data:
+➮ **Full Backup:** 
+
+- Backs up the **whole**(all structure) database.    
+- Database can't be **accessed** and **modified** during backup.   
+
+➮ **Incremental Backup:
+**
+- Only copies data that has been **changed** or created since the **previous backup**.  
+- Database can be **accessed** during backup.  
