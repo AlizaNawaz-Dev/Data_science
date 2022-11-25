@@ -99,15 +99,13 @@ TRUNCATE TABLE my_students.student;
 - To create duplicate copies of data.   
 - Increase performance and improve reliability.  
 
-◉ Master:
+◉ **Master:**
 
--
--
+-  The master database is actually the **keeper of the data** resources and also the place where all the writing requests are performed.    
 
-◉ Slave:
+◉ **Slave:**
 
--
--
+- The slave database s**erves as the backup** for the master database.    
 
 ➥  **Benefits:**
 
@@ -125,11 +123,21 @@ TRUNCATE TABLE my_students.student;
     
     - Analysis can be performed on slave without having any affect on master's speed or other slaves.  
 ➥ **Replication Types:**
-    ◉
-    ◉
-    ◉
-    ◉
+    ◉ Asynchronous:
+    - Update occurs on Master and changes replicates to slaves.  
+    
+    ◉ Synchronous:
+    - Update occurs on Master and changes replicates to slaves at the same time.  
+    
+    ◉ Semi-Synchronous:
+    -  Master blocks before returning to the session that the transaction has replicated to atleast one of the slaves.   
+    
+    ◉ Delayed:
+    - Replica server lags behind the source by at least a specified amount of time.   
 ➥ **Replication Formats:**
-    ◉
-    ◉
-    ◉
+    ◉ Statement Based Replication (SBR):
+     - 
+    ◉ Row Based Replication (RBR):
+    - 
+    ◉ Mixed Based Replication (MBR):
+    -
