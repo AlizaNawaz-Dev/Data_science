@@ -106,38 +106,43 @@ TRUNCATE TABLE my_students.student;
 ◉ **Slave:**
 
 - The slave database s**erves as the backup** for the master database.    
-
 ➥  **Benefits:**
 
-    ◉ ScaleOut Solutions: 
+◉ ScaleOut Solutions: 
     
-    - Load is spreaded among multiple slaves.  
-    - All writes and updates must occur on master.  
-    - All reads can occur on any slave.
+- Load is spreaded among multiple slaves.  
+- All writes and updates must occur on master.  
+- All reads can occur on any slave.
     
-    ◉ Data Security:
+◉ Data Security:
     
-    - Backups can be performed on slaves without affecting the master.  
+ - Backups can be performed on slaves without affecting the master.  
     
-    ◉ Analytics:
+◉ Analytics:
     
-    - Analysis can be performed on slave without having any affect on master's speed or other slaves.  
-➥ **Replication Types:**
-    ◉ Asynchronous:
-    - Update occurs on Master and changes replicates to slaves.  
+- Analysis can be performed on slave without having any affect on master's speed or other slaves.  
     
-    ◉ Synchronous:
-    - Update occurs on Master and changes replicates to slaves at the same time.  
+➥ **Replication Types:**   
+
+◉ Asynchronous:
+- Update occurs on Master and changes replicates to slaves.  
     
-    ◉ Semi-Synchronous:
-    -  Master blocks before returning to the session that the transaction has replicated to atleast one of the slaves.   
+◉ Synchronous:
+- Update occurs on Master and changes replicates to slaves at the same time.  
+ 
+ ◉ Semi-Synchronous:
+ -  Master blocks before returning to the session that the transaction has replicated to atleast one of the slaves.   
     
-    ◉ Delayed:
-    - Replica server lags behind the source by at least a specified amount of time.   
-➥ **Replication Formats:**
-    ◉ Statement Based Replication (SBR):
-     - 
-    ◉ Row Based Replication (RBR):
-    - 
-    ◉ Mixed Based Replication (MBR):
-    -
+ ◉ Delayed:
+ - Replica server lags behind the source by at least a specified amount of time.   
+    
+➥ **Replication Formats:**   
+
+ ◉ Statement Based Replication (SBR):
+ - Entire SQL statement is replicated.
+     
+◉ Row Based Replication (RBR):
+- Changed rows are replicated.   
+    
+◉ Mixed Based Replication (MBR):
+- Allows combination of Statement Based Replication and Row Based Replication.  
