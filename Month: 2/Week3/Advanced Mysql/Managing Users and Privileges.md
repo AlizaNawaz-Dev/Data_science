@@ -89,4 +89,47 @@ TRUNCATE TABLE my_students.student;
 ➮ Status and System Variables:
 - View status and system variables.  
 
+### Denormalization:
 
+- Move data from **normalized tables back** into a single table to have the data where it is needed.      
+- To improv**e read performance** of the database.   
+
+# Replication:
+
+- To create duplicate copies of data.   
+- Increase performance and improve reliability.  
+
+◉ Master:
+
+-
+-
+
+◉ Slave:
+
+-
+-
+
+➥  **Benefits:**
+
+    ◉ ScaleOut Solutions: 
+    
+    - Load is spreaded among multiple slaves.  
+    - All writes and updates must occur on master.  
+    - All reads can occur on any slave.
+    
+    ◉ Data Security:
+    
+    - Backups can be performed on slaves without affecting the master.  
+    
+    ◉ Analytics:
+    
+    - Analysis can be performed on slave without having any affect on master's speed or other slaves.  
+➥ **Replication Types:**
+    ◉
+    ◉
+    ◉
+    ◉
+➥ **Replication Formats:**
+    ◉
+    ◉
+    ◉
